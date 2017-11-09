@@ -42,5 +42,7 @@ $ sudo start ./start-master.sh
 7. For each slave machine, change directory to /opt/spark/sbin and start the slave by the following command, the master ip and port should be replaced accordingly:   
 $ sudo ./start-slave.sh spark://192.168.0.101:7077  
 
-8. Now refresh your webpage, you should see all the nodes running properly :)
+8. Now refresh your webpage, you should see all the nodes running properly :)  
+
+9. More detailed discussions are available in the attached PPT file. 
 
