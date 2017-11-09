@@ -21,8 +21,8 @@ export PATH=$SPARK_HOME/bin:$PATH
 Before this, you need to ensure that pcs in the cluster all have ssh installed and configured.
 
 1. Change directory to /etc, and add the followings lines to the hosts file, the nickname and ip should be replaced according to your case:    
-master 192.168.0.101
-slave02 192.168.0.102
+master 192.168.0.101  
+slave02 192.168.0.102  
 slave03 192.168.0.101
 
 2. Change directory to /opt/spark/conf, make a copy of slaves.template file and rename into slaves. And add the following lines into the slaves file, the nicknames should be replaced accordingly:  
