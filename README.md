@@ -4,8 +4,8 @@ Documents the setup and running of pySpark(2.2.0) on Ubuntu(16.04)
 #Install pySpark (original post: https://blog.sicara.com/get-started-pyspark-jupyter-guide-tutorial-ae2fe84f594f)
 
 Before installing pySpark, make sure you have Java 8 or higher installed on your computer.
-1. First of all, visit the Spark downloads page. Select the latest Spark release, a prebuilt package for Hadoop, and download it directly.Unzip it and move it to your /opt folder:    
-$ tar -xzf spark-2.2.0-bin-hadoop2.7.tgz  
+1. First of all, visit the Spark downloads page (http://spark.apache.org/downloads.html). Select the latest Spark release, a prebuilt package for Hadoop, and download it directly.Unzip it and move it to your /opt folder:    
+$ tar -xzf spark-2.2.0-bin-hadoop2.7.tgz
 $ mv spark-2.2.0-bin-hadoop2.7 /opt/spark-2.2.0  
 
 2. Create a symbolic link:  
@@ -32,5 +32,15 @@ slave03
 3. Make a copy of the spark-env.sh.template file and rename into spark-env.sh. Add the following line, the ip should be replaced accordingly:  
 SPARK_MASTER_HOST=192.168.0.101  
 
-4. 
+4. Copy the above edited files to the same directory of all the nodes.
+
+5. On your master machine, change directory to /opt/spark/sbin and start the master host by the following command:  
+$ sudo start ./start-master.sh
+
+6. Launch your browser and visit localhost://8080, you should see your master running at the assigned ip address.  
+
+7. For each slave machine, change directory to /opt/spark/sbin and start the slave by the following command, the master ip and port should be replaced accordingly:   
+$ sudo ./start-slave.sh spark://192.168.0.101:7077  
+
+8. Now refresh your webpage, you should see all the nodes running properly :)
 
