@@ -48,3 +48,6 @@ $ sudo ./start-slave.sh spark://192.168.0.101:7077
 
 10. In order to make use of hdfs on Spark, we need to install hadoop first. Please follow the detailed steps here (https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-16-04)
 
+11. And detailed introduction on setting up and navigating hdfd:  
+(https://www.tutorialspoint.com/hadoop/index.htm)
+
